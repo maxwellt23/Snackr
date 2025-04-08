@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		B029E6272DA4D62F00D74BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B029E5D72DA4610E00D74BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B029E5DE2DA4610E00D74BCF;
+			remoteInfo = Snackr;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B029E5DF2DA4610E00D74BCF /* Snackr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snackr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B029E6232DA4D62F00D74BCF /* SnackrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnackrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = Snackr;
 			sourceTree = "<group>";
 		};
+		B029E6242DA4D62F00D74BCF /* SnackrTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SnackrTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B029E5DC2DA4610E00D74BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B029E6202DA4D62F00D74BCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				B029E5E12DA4610E00D74BCF /* Snackr */,
+				B029E6242DA4D62F00D74BCF /* SnackrTests */,
 				B029E5E02DA4610E00D74BCF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				B029E5DF2DA4610E00D74BCF /* Snackr.app */,
+				B029E6232DA4D62F00D74BCF /* SnackrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = B029E5DF2DA4610E00D74BCF /* Snackr.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B029E6222DA4D62F00D74BCF /* SnackrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B029E6292DA4D62F00D74BCF /* Build configuration list for PBXNativeTarget "SnackrTests" */;
+			buildPhases = (
+				B029E61F2DA4D62F00D74BCF /* Sources */,
+				B029E6202DA4D62F00D74BCF /* Frameworks */,
+				B029E6212DA4D62F00D74BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B029E6282DA4D62F00D74BCF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B029E6242DA4D62F00D74BCF /* SnackrTests */,
+			);
+			name = SnackrTests;
+			packageProductDependencies = (
+			);
+			productName = SnackrTests;
+			productReference = B029E6232DA4D62F00D74BCF /* SnackrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					B029E5DE2DA4610E00D74BCF = {
 						CreatedOnToolsVersion = 16.1;
+					};
+					B029E6222DA4D62F00D74BCF = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = B029E5DE2DA4610E00D74BCF;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				B029E5DE2DA4610E00D74BCF /* Snackr */,
+				B029E6222DA4D62F00D74BCF /* SnackrTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B029E5DD2DA4610E00D74BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B029E6212DA4D62F00D74BCF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B029E61F2DA4D62F00D74BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B029E6282DA4D62F00D74BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B029E5DE2DA4610E00D74BCF /* Snackr */;
+			targetProxy = B029E6272DA4D62F00D74BCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B029E5EB2DA4610F00D74BCF /* Debug */ = {
@@ -302,6 +377,42 @@
 			};
 			name = Release;
 		};
+		B029E62A2DA4D62F00D74BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H72S9FYHW8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.maxxium.SnackrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snackr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Snackr";
+			};
+			name = Debug;
+		};
+		B029E62B2DA4D62F00D74BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H72S9FYHW8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.maxxium.SnackrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snackr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Snackr";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +430,15 @@
 			buildConfigurations = (
 				B029E5EE2DA4610F00D74BCF /* Debug */,
 				B029E5EF2DA4610F00D74BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B029E6292DA4D62F00D74BCF /* Build configuration list for PBXNativeTarget "SnackrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B029E62A2DA4D62F00D74BCF /* Debug */,
+				B029E62B2DA4D62F00D74BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
