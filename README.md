@@ -15,10 +15,11 @@ I focused mainly on the UI/UX of the app, implementing haptic feedback and makin
 
 ### Time Spent: Approximately how long did you spend working on this project? How did you allocate your time?
 
-I spent approximately 5 hours working on this project. My time was allocated as follows:\n
-    - 15 minutes were used to connect to the API and display the data using a basic SwiftUI view.\n
-    - 2.5 hours were focused on the UI/UX design, making sure the app had a clean and intuitve UI.\n
-    - 1.5 hours were spent learning about unit testing and then writing/integrating the tests.\n
+I spent approximately 5 hours working on this project. My time was allocated as follows:
+
+    - 15 minutes were used to connect to the API and display the data using a basic SwiftUI view.
+    - 2.5 hours were focused on the UI/UX design, making sure the app had a clean and intuitve UI.
+    - 1.5 hours were spent learning about unit testing and then writing/integrating the tests.
     - 45 minutes were dedicated to creating a custom image loading/caching system.
 
 ### Trade-offs and Decisions: Did you make any significant trade-offs in your approach?
