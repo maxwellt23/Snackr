@@ -17,4 +17,6 @@ protocol FileManagerProtocol {
     func write(data: Data, to url: URL) throws
     
     func contents(atPath path: String) -> Data?
+    
+    func fetchImageData(from url: URL) -> Data?
 }

@@ -38,6 +38,7 @@ struct RecipeDetailView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundStyle(Color("PText"))
+                        .padding(.top)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     Text(recipe.cuisine)

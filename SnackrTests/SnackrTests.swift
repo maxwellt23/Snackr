@@ -113,17 +113,26 @@ class SnackrTests {
     class ImageCachingServiceTests {
         let imageCachingService = ImageCachingService(fileManager: MockFileManager())
         
-        @Test("cacheImage() & getCachedImage() successfully adds/retrieves the requested image")
+        @Test("cacheImage() successfully fetches and caches an image")
         func testCacheImage() async throws {
             let testURL = URL(string: "https://example.com/test-image.png")!
-            let testImage = UIImage(systemName: "star.fill")!
             let key = testURL.pathComponents.suffix(2).joined(separator: "_")
             
-            imageCachingService.cacheImage(with: key, image: testImage)
+            let cachedImage = await imageCachingService.cacheImage(with: key, url: testURL)
             
-            try? await Task.sleep(for: .seconds(0.1))
+            #expect(cachedImage != nil)
+        }
+        
+        @Test("getCachedImage() successfully gets cached image")
+        func testGetCachedImage() async throws {
+            let testURL = URL(string: "https://example.com/test-image.png")!
+            let key = testURL.pathComponents.suffix(2).joined(separator: "_")
             
-            #expect(imageCachingService.getCachedImage(with: key) != nil)
+            let _ = await imageCachingService.cacheImage(with: key, url: testURL)
+            
+            let cachedImage = await imageCachingService.getCachedImage(with: key)
+            
+            #expect(cachedImage != nil)
         }
         
         @Test("getCachedImage() returns nil if image is not found")
@@ -131,7 +140,7 @@ class SnackrTests {
             let testURL = URL(string: "https://example.com/fake-image.png")!
             let key = testURL.pathComponents.suffix(2).joined(separator: "_")
             
-            #expect(imageCachingService.getCachedImage(with: key) == nil)
+            #expect(await imageCachingService.getCachedImage(with: key) == nil)
         }
     }
     

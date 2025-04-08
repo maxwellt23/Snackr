@@ -5,7 +5,7 @@
 //  Created by Tyler Maxwell on 4/8/25.
 //
 
-import Foundation
+import UIKit
 @testable import Snackr
 
 class MockFileManager: FileManagerProtocol {
@@ -32,5 +32,9 @@ class MockFileManager: FileManagerProtocol {
     
     func contents(atPath path: String) -> Data? {
         files[path]
+    }
+    
+    func fetchImageData(from url: URL) -> Data? {
+        return UIImage(systemName: "star.fill")?.pngData()
     }
 }

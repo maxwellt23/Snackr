@@ -18,16 +18,13 @@ class ImageCachingService {
     }
     
     func cacheImage(with key: String, url: URL) async -> UIImage? {
-        guard let data = try? Data(contentsOf: url),
-              let image = UIImage(data: data),
-              let imageData = image.pngData(),
-        let url = getImagePath(key: key) else {
+        guard let imageData = fileManager.fetchImageData(from: url), let url = getImagePath(key: key) else {
             return nil
         }
         
         do {
             try fileManager.write(data: imageData, to: url)
-            return image
+            return UIImage(data: imageData)
         } catch {
             print("Error adding image to cache: \(error.localizedDescription)")
             return nil
