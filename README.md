@@ -3,10 +3,10 @@
 Snackr is a simple, lightweight demo recipes app. It features advanced search and filtering capabilites, image caching, a custom pull to refresh implementation and dark mode support. I had a lot of fun working on this project and was able to use the skills I already had and add some new ones to my toolbox.
 
 <p align="middle">
-  <img align="top" src="/search.png" width="25%" />
-  <img align="top" src="/refresh.png" width="25%" /> 
-  <img align="top" src="/detail.png" width="25%" />
-  <img align="top" src="/darkmode.png" width="25%" />
+  <img align="top" src="/search.png" width="24%" />
+  <img align="top" src="/refresh.png" width="24%" /> 
+  <img align="top" src="/detail.png" width="24%" />
+  <img align="top" src="/darkmode.png" width="24%" />
 </p>
 
 ### Focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
