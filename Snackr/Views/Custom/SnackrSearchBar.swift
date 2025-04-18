@@ -42,7 +42,11 @@ struct SnackrSearchBar: View {
                     
                     if isSearching {
                         Button(action: {
-                            isSearching = false
+                            if searchText.isEmpty {
+                                isSearching = false
+                            } else {
+                                searchText = ""
+                            }
                         }) {
                             Image(systemName: "xmark")
                                 .font(.title3)
